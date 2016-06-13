@@ -12,7 +12,7 @@ public class MainClass extends JFrame{
         setTitle("Example UI Window");
         setSize(400,400);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);//
     }
 
     public static void main(String[] args) {
