@@ -14,7 +14,7 @@ public class LambdaTest {
         /*for(int integer : integerList){
             System.out.println(integer);
         }*/
-        integerList.forEach((Integer value) -> System.out.println(value));
+        //integerList.forEach((Integer value) -> System.out.println(value));
     }
 
 }

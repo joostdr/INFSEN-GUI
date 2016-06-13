@@ -2,8 +2,12 @@ package main;
 
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 
 public class MainClass extends JFrame{
 
@@ -75,9 +79,9 @@ public class MainClass extends JFrame{
         centerRow.setPreferredSize(new Dimension(0,0));
         centerRow.setLayout(new BoxLayout(centerRow,BoxLayout.Y_AXIS));
         DefaultListModel<String> listModel = new DefaultListModel();
-        listModel.addElement("Jane Doe");
-        listModel.addElement("John Smith");
-        listModel.addElement("Kathy Green");
+        listModel.addElement("Banaan");
+        listModel.addElement("Appel");
+        listModel.addElement("Peer");
         JList<String> list = new JList(listModel);
         list.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         list.setLayoutOrientation(JList.VERTICAL);
@@ -92,7 +96,65 @@ public class MainClass extends JFrame{
 
     private JPanel createRightRow(){
         JPanel rightRow = new JPanel();
+        rightRow.setLayout(new BoxLayout(rightRow, BoxLayout.Y_AXIS));
+        JPanel pictureAndProductInfo = new JPanel();
+        JPanel nameCategoryPrice = new JPanel();
+        JPanel productName = new JPanel(new GridLayout(1,2));
+        JPanel productCategory = new JPanel(new GridLayout(1,2));
+        JPanel productPrice = new JPanel(new GridLayout(1,2));
+        JPanel descriptionContainer = new JPanel();
+        JPanel description = new JPanel(new GridLayout(1,2));
+        nameCategoryPrice.setLayout(new BoxLayout(nameCategoryPrice, BoxLayout.Y_AXIS));
+        try {
+            BufferedImage picture = ImageIO.read(new File("src/main/resources/img/banana.png"));
+            picture = resizeImage(picture);
+            JLabel pic = new JLabel(new ImageIcon(picture));
+            pictureAndProductInfo.add(pic);
+        }catch(Exception e){
+            System.out.println("File not found");
+        }
+        JLabel product = new JLabel("Name: ");
+        JLabel category = new JLabel("Category: ");
+        JLabel price = new JLabel("Price: ");
+
+        JLabel productName1 = new JLabel("");
+        JLabel productCategory1 = new JLabel("");
+        JLabel productPrice1 = new JLabel("");
+
+        productName.add(product);
+        productName.add(productName1);
+
+        productCategory.add(category);
+        productCategory.add(productCategory1);
+
+        productPrice.add(price);
+        productPrice.add(productPrice1);
+
+        nameCategoryPrice.add(productName);
+        nameCategoryPrice.add(productCategory);
+        nameCategoryPrice.add(productPrice);
+
+
+        pictureAndProductInfo.add(nameCategoryPrice);
+        rightRow.add(pictureAndProductInfo);
+
+        descriptionContainer.add(new JLabel("Description: "));
+        descriptionContainer.add(new JLabel("Een banaantje"));
+
+        description.add(descriptionContainer);
+
+        rightRow.add(description);
+        rightRow.add(new JButton("Delete"));
         return rightRow;
+    }
+
+    private BufferedImage resizeImage(BufferedImage image){
+        Image tmp = image.getScaledInstance(160,160, Image.SCALE_SMOOTH);
+        BufferedImage resizedImage = new BufferedImage(160, 160, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g = resizedImage.createGraphics();
+        g.drawImage(tmp, 0, 0, null);
+        g.dispose();
+        return resizedImage;
     }
 
     public static void main(String[] args) {
