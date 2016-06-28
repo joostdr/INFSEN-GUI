@@ -1,4 +1,4 @@
-package visitor;
+package visitor.surface;
 
 import adapter.Apple;
 import adapter.Banana;

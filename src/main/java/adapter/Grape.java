@@ -1,20 +1,16 @@
 package adapter;
 
-import visitor.Surface;
-import visitor.Visitable;
-import visitor.Visitor;
+import visitor.surface.Surface;
+import visitor.surface.Visitable;
+import visitor.surface.Visitor;
 
 /**
  * Created by joost on 27-6-2016.
  */
 public class Grape implements Visitable {
 
-    public void showGrape(){
-        System.out.println("Grape");
-    }
-
-    public void getColor(){
-        System.out.println("purple");
+    public String grapeImage() {
+        return "grapes.jpg";
     }
 
     @Override

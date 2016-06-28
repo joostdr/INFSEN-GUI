@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Main main = new Main();
         main.buttons = new Buttons();
-        main.images = new Images();
+        main.images = new Labels();
         main.printInfo(main.buttons.createIterator());
         main.printInfo(main.images.createIterator());
 

@@ -1,4 +1,4 @@
-package visitor;
+package visitor.surface;
 
 import adapter.Apple;
 import adapter.Banana;
@@ -7,10 +7,10 @@ import adapter.Grape;
 /**
  * Created by joost on 27-6-2016.
  */
-public class SurfaceVisitor implements Visitor{
+public class SurfaceVisitor implements Visitor {
     @Override
     public Surface visit(Apple apple) {
-        return new Surface(80,80);
+        return new Surface(60,60);
     }
 
     @Override
@@ -20,6 +20,7 @@ public class SurfaceVisitor implements Visitor{
 
     @Override
     public Surface visit(Grape grape) {
-        return new Surface(120,120);
+        return new Surface(140,140);
     }
+
 }

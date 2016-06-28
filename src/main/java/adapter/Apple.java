@@ -1,22 +1,17 @@
 package adapter;
 
-import visitor.Surface;
-import visitor.Visitable;
-import visitor.Visitor;
+import visitor.surface.Surface;
+import visitor.surface.Visitable;
+import visitor.surface.Visitor;
 
 /**
  * Created by joost on 26-6-2016.
  */
-public class Apple implements AppleImage, Visitable{
+public class Apple implements AppleImage, Visitable {
 
     @Override
-    public void showApple() {
-        System.out.println("Apple");
-    }
-
-    @Override
-    public void getColor() {
-        System.out.println("Green");
+    public String appleImage() {
+        return "apple.jpg";
     }
 
     @Override

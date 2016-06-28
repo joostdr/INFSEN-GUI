@@ -12,12 +12,7 @@ public class BananaImageAdapter implements AppleImage {
     }
 
     @Override
-    public void showApple() {
-        banana.showBanana();
-    }
-
-    @Override
-    public void getColor() {
-        banana.showColor();
+    public String appleImage() {
+        return banana.bananaImage();
     }
 }

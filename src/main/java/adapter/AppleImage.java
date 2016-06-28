@@ -5,8 +5,6 @@ package adapter;
  */
 public interface AppleImage {
 
-    public void showApple();
-
-    public void getColor();
+    public String appleImage();
 
 }

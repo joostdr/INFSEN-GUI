@@ -1,17 +1,22 @@
 package decorator;
 
+import factory.ElementFactory;
+import factory.WindowElement;
+
+import javax.swing.*;
+
 /**
  * Created by joost on 26-6-2016.
  */
 public abstract class WindowDecorator implements Window {
 
-    protected Window tempWindow;
+    protected Window decoratedWindow;
 
     public WindowDecorator(Window window) {
-        this.tempWindow = window;
+        this.decoratedWindow = window;
     }
 
-    public void getDescription() {
-        tempWindow.getDescription();
+    public JFrame createWindow() {
+        return decoratedWindow.createWindow();
     }
 }

@@ -3,6 +3,7 @@ package visitor;
 import adapter.Apple;
 import adapter.Banana;
 import adapter.Grape;
+import visitor.surface.SurfaceVisitor;
 
 /**
  * Created by joost on 27-6-2016.
@@ -21,8 +22,8 @@ public class Main {
         main.setGrape(new Grape());
         main.setSurfaceVisitor(new SurfaceVisitor());
 
-        System.out.println(main.getSurfaceVisitor().visit(main.getApple()).getHeight());
-        System.out.println(main.getSurfaceVisitor().visit(main.getApple()).getWidth());
+        System.out.println(main.getApple().accept(main.getSurfaceVisitor()).getHeight());
+        System.out.println(main.getApple().accept(main.getSurfaceVisitor()).getWidth());
 
         System.out.println(main.getSurfaceVisitor().visit(main.getBanana()).getHeight());
         System.out.println(main.getSurfaceVisitor().visit(main.getBanana()).getWidth());

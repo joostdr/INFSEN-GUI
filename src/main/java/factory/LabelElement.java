@@ -1,20 +1,22 @@
 package factory;
 
+import javax.swing.*;
+
 /**
  * Created by joost on 26-6-2016.
  */
 public class LabelElement extends Element {
-    private String type;
+    private JLabel label;
 
-    public LabelElement() {
-        System.out.println("Label");
+    public LabelElement(String name) {
+        this.label = new JLabel(name);
     }
 
-    public String getType() {
-        return type;
+    public JLabel getLabel() {
+        return label;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setLabel(JLabel label) {
+        this.label = label;
     }
 }

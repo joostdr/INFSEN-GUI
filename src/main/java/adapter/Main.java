@@ -5,21 +5,21 @@ package adapter;
  */
 public class Main {
     public static void main(String[] args) {
-        Apple apple = new Apple();
+       /* Apple apple = new Apple();
         Banana banana = new Banana();
         Grape grape = new Grape();
 
         GrapeImageAdapter grapeImageAdapter = new GrapeImageAdapter(grape);
         BananaImageAdapter bananaImageAdapter = new BananaImageAdapter(banana);
-        apple.showApple();
-        banana.showBanana();
-        grape.showGrape();
+        apple.appleImage();
+        banana.bananaImage();
+        grape.grapeImage();
 
         bananaImageAdapter.showApple();
         bananaImageAdapter.getColor();
 
         grapeImageAdapter.showApple();
-        grapeImageAdapter.getColor();
+        grapeImageAdapter.getColor();*/
 
 
     }

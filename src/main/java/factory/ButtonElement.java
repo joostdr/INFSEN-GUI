@@ -1,21 +1,26 @@
 package factory;
 
+import javax.swing.*;
+import java.awt.*;
+
 /**
  * Created by joost on 26-6-2016.
  */
 public class ButtonElement extends Element {
 
-    private String type;
+    private JButton button;
 
-    public ButtonElement() {
-        System.out.println("Button");
+    public ButtonElement(String name) {
+        this.button = new JButton(name);
+        button.setPreferredSize(new Dimension(40, 40));
     }
 
-    public String getType() {
-        return type;
+
+    public JButton getButton() {
+        return button;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setButton(JButton button) {
+        this.button = button;
     }
 }

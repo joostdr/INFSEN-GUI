@@ -5,11 +5,11 @@ package factory;
  */
 public class ElementFactory {
 
-    public Element createElement(String elementName){
-        switch(elementName){
-            case "Button": return new ButtonElement();
-            case "Label": return new LabelElement();
-            case "TextInput": return new TextInputElement();
+    public static Element createElement(String elementType, String elementName, String decorationType){
+        switch(elementType){
+            case "Button": return new ButtonElement(elementName);
+            case "Label": return new LabelElement(elementName);
+            case "Window": return new WindowElement(decorationType);
             default:return null;
         }
     }

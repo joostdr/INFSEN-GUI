@@ -12,12 +12,7 @@ public class GrapeImageAdapter implements AppleImage{
     }
 
     @Override
-    public void showApple() {
-        grape.showGrape();
-    }
-
-    @Override
-    public void getColor() {
-        grape.getColor();
+    public String appleImage() {
+        return grape.grapeImage();
     }
 }
