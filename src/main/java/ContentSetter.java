@@ -2,8 +2,8 @@ import adapter.*;
 import iterator.Buttons;
 import iterator.IteratorForGui;
 import iterator.Labels;
-import visitor.surface.Surface;
-import visitor.surface.SurfaceVisitor;
+import visitor.Surface;
+import visitor.SurfaceVisitor;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

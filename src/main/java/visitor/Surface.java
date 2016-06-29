@@ -1,4 +1,4 @@
-package visitor.surface;
+package visitor;
 
 /**
  * Created by joost on 27-6-2016.

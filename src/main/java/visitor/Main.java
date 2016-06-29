@@ -3,7 +3,6 @@ package visitor;
 import adapter.Apple;
 import adapter.Banana;
 import adapter.Grape;
-import visitor.surface.SurfaceVisitor;
 
 /**
  * Created by joost on 27-6-2016.

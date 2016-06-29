@@ -1,8 +1,8 @@
 package adapter;
 
-import visitor.surface.Surface;
-import visitor.surface.Visitable;
-import visitor.surface.Visitor;
+import visitor.Surface;
+import visitor.Visitable;
+import visitor.Visitor;
 
 /**
  * Created by joost on 27-6-2016.

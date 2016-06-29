@@ -22,11 +22,11 @@ public class GUI {
     }
 
     public void createGui(){
-        JFrame frame = ((WindowElement) elementFactory.createElement("Window","Main window","icon")).getFrame();
-        contentSetter.addLabels(frame);
-        contentSetter.addButtons(frame);
+        JFrame frame = ((WindowElement) elementFactory.createElement("Window","Main window","iconAndBorder")).getFrame(); //factory/decorator
+        contentSetter.addLabels(frame); //iterator
+        contentSetter.addButtons(frame); //iterator
         contentSetter.getElements(frame);
-        contentSetter.createIconList();
+        contentSetter.createIconList(); //visitor/adapter
         contentSetter.setIcons();
         frame.setVisible(true);
     }
