@@ -7,6 +7,13 @@ import adapter.Grape;
 /**
  * Created by joost on 27-6-2016.
  */
+
+/**
+ * SurfaceVisitor is visited by AppleImage, Banana or Grape
+ * The width and height gets set by calling accept on a instance of these classes
+ * accept takes a surfacevisitor
+ */
+
 public class SurfaceVisitor implements Visitor {
     @Override
     public Surface visit(Apple apple) {

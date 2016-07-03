@@ -9,12 +9,18 @@ import java.io.IOException;
 /**
  * Created by joost on 26-6-2016.
  */
+
+/**
+ * Class for adding an icon to JFrame
+ */
+
 public class CustomIconWindow extends WindowDecorator{
 
     public CustomIconWindow(Window decoratedWindow) {
         super(decoratedWindow);
     }
 
+    @Override
     public JFrame createWindow() {
         JFrame frame = decoratedWindow.createWindow();
         try{

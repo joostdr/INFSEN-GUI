@@ -9,11 +9,11 @@ public class Collection implements Iterator {
 
     ArrayList<Integer> intList;
 
-    public Collection() {
+    private Collection() {
         intList = new ArrayList<>();
         intList.add(1);
         intList.add(2);
-        intList.add(3);//
+        intList.add(3);
         intList.add(4);
         intList.add(5);
     }

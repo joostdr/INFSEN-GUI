@@ -3,6 +3,10 @@ package visitor;
 /**
  * Created by joost on 27-6-2016.
  */
+
+/**
+ * Surface model for storing width and height in a single object
+ */
 public class Surface {
 
     private int width;

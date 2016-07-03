@@ -15,7 +15,7 @@ public class Buttons implements IteratorForGui {
     private ArrayList<JButton> allButtons;
 
     public Buttons() {
-        allButtons = new ArrayList<JButton>();
+        allButtons = new ArrayList<>();
         addButton(((ButtonElement)ElementFactory.createElement("Button","button1","")).getButton());
         addButton(((ButtonElement)ElementFactory.createElement("Button","button2","")).getButton());
         addButton(((ButtonElement)ElementFactory.createElement("Button","button3","")).getButton());

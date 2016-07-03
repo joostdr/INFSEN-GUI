@@ -9,6 +9,12 @@ import java.awt.*;
 /**
  * Created by joost on 26-6-2016.
  */
+
+/**
+ * Class for basicWindow, size and name is set here
+ * This class gets decorated with CustomBorderWindow or CustomIconWindow
+ */
+
 public class BasicWindow implements Window {
 
     public JFrame createWindow() {

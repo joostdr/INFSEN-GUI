@@ -25,9 +25,10 @@ public class GUI {
         JFrame frame = ((WindowElement) elementFactory.createElement("Window","Main window","iconAndBorder")).getFrame(); //factory/decorator
         contentSetter.addLabels(frame); //iterator
         contentSetter.addButtons(frame); //iterator
-        contentSetter.getElements(frame);
+        contentSetter.getAllLabels(frame);
         contentSetter.createIconList(); //visitor/adapter
         contentSetter.setIcons();
+        contentSetter.createNone(frame); //option
         frame.setVisible(true);
     }
 
