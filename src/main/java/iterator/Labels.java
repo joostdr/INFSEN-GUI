@@ -10,7 +10,7 @@ import java.util.Iterator;
 /**
  * Created by joost on 27-6-2016.
  */
-public class Labels implements IteratorForGui {
+public class Labels {
 
     private ArrayList<JLabel> allLabels;
 
@@ -31,9 +31,5 @@ public class Labels implements IteratorForGui {
 
     public void setAllLabels(ArrayList<JLabel> allLabels) {
         this.allLabels = allLabels;
-    }
-
-    public Iterator createIterator() {
-        return allLabels.iterator();
     }
 }

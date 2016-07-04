@@ -10,7 +10,7 @@ import java.util.Iterator;
 /**
  * Created by joost on 27-6-2016.
  */
-public class Buttons implements IteratorForGui {
+public class Buttons {
 
     private ArrayList<JButton> allButtons;
 
@@ -31,9 +31,5 @@ public class Buttons implements IteratorForGui {
 
     public void setAllButtons(ArrayList<JButton> allButtons) {
         this.allButtons = allButtons;
-    }
-
-    public Iterator createIterator() {
-        return allButtons.iterator();
     }
 }

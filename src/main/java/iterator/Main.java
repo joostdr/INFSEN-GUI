@@ -1,6 +1,7 @@
 package iterator;
 
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created by joost on 27-6-2016.
@@ -12,10 +13,10 @@ public class Main {
 
     public static void main(String[] args) {
         Main main = new Main();
-        main.buttons = new Buttons();
+       /* main.buttons = new Buttons();
         main.images = new Labels();
-        main.printInfo(main.buttons.createIterator());
-        main.printInfo(main.images.createIterator());
+        main.printInfo(main.buttons.getNext());
+        main.printInfo(main.images.getNext());*/
 
     }
 

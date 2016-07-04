@@ -2,6 +2,7 @@ import adapter.*;
 import factory.ButtonElement;
 import factory.ElementFactory;
 import iterator.Buttons;
+import iterator.IterableArray;
 import iterator.IteratorForGui;
 import iterator.Labels;
 import optional.IOption;
@@ -38,15 +39,16 @@ public class ContentSetter {
      */
 
     public void addButtons(JFrame frame) {
-        IteratorForGui buttons = new Buttons();
+        Buttons buttons = new Buttons();
+        IteratorForGui iterator = new IterableArray(buttons.getAllButtons());
         int x = 150;
-        Iterator iterator = buttons.createIterator();
         while (iterator.hasNext()) {
-            JButton button = (JButton) iterator.next();
-            button.setBounds(x, 550, 120, 40);
-            IOption<String> buttonText = new Some<>("Some text");
-            button.setText(buttonText.getValue());
-            frame.add(button);
+            IOption someOrNone = iterator.getNext();
+            if(someOrNone instanceof Some){
+                JButton button = (JButton) someOrNone.getValue();
+                button.setBounds(x, 550, 120, 40);
+                frame.add(button);
+            }
             x += 350;
         }
     }
@@ -59,13 +61,16 @@ public class ContentSetter {
      */
 
     public void addLabels(JFrame frame) {
-        IteratorForGui labels = new Labels();
+        Labels labels = new Labels();
         int x = 150;
-        Iterator iterator = labels.createIterator();
+        IteratorForGui iterator = new IterableArray(labels.getAllLabels());
         while (iterator.hasNext()) {
-            JLabel label = (JLabel) iterator.next();
-            label.setBounds(x, 250, 200, 200);
-            frame.add(label);
+            IOption someOrNone = iterator.getNext();
+            if(someOrNone instanceof Some){
+                JLabel label = (JLabel) someOrNone.getValue();
+                label.setBounds(x, 250, 200, 200);
+                frame.add(label);
+            }
             x += 350;
         }
     }
